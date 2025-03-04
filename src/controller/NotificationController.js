@@ -6,7 +6,6 @@ const createNotification = async (req, res) => {
       req.body
     );
 
-    console.log("Notification created", req.body);
     return res.status(201).json({
       message: "Notification created successfully",
       notification: newNotification,

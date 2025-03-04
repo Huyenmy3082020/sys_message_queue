@@ -1,11 +1,7 @@
 const amqp = require("amqplib");
 const { createClient } = require("redis");
 const runProducer = require("../../src/producer/producer");
-
-const redisClient = createClient({
-  socket: { host: "localhost", port: 6379 },
-});
-redisClient.on("error", (err) => console.error("❌ Redis error:", err));
+const redisClient = require("../../config/redis");
 
 async function connectRedis() {
   if (!redisClient.isOpen) {

@@ -19,10 +19,9 @@ const sendEmailService = async (email, emailContent) => {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log("Email gửi thành công:", info);
     return { success: true, message: "Email đã được gửi", info };
   } catch (error) {
-    console.error("Lỗi khi gửi email:", error); // Log lỗi chi tiết
+    console.error("Lỗi khi gửi email:", error);
     return {
       success: false,
       message: "Gửi email thất bại",
