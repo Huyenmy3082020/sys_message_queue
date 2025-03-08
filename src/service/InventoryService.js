@@ -1,7 +1,6 @@
 const { default: mongoose } = require("mongoose");
 const Inventory = require("../models/InventoryModel");
 
-// 🔹 Thêm hàng vào kho
 async function addInventory({
   stock,
   productId,
